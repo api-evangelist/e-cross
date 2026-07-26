@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://e-cross.tech/llms.txt
+notes: >-
+  e-CROSS runs on Wix; Wix exposes a hosted, unauthenticated Model Context
+  Protocol server for the site. Endpoint verified live with a tools/list call
+  (HTTP 200). Tools are the generic Wix Site MCP surface, not an e-CROSS
+  first-party API. No authentication required; only public site data is exposed.
+server:
+  name: e-cross
+  provider: Wix Site MCP
+  transport: http
+  url: https://www.e-cross.tech/_api/mcp
+  authentication: none
+  docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
+tools:
+  - name: ReadFullDocsArticle
+    description: "Fetches the full Wix docs article or method article with code examples for using the method."
+  - name: ReadFullDocsMethodSchema
+    description: "Fetches the full method schema for a given method."
+  - name: BrowseWixRESTDocsMenu
+    description: "Browse the Wix REST API documentation menu hierarchy."
+  - name: CallWixSiteAPI
+    description: "Call apis on site \"e-CROSS\" (https://www.e-cross.tech/_api/mcp). Use this to perform an action on visitor's behalf, for example, query the site's data or book an appointment."
+  - name: GenerateVisitorToken
+    description: "Create a new visitor session and obtain a visitor access token for site \"e-CROSS\" (https://www.e-cross.tech/_api/mcp)."
+  - name: SearchSiteApiDocs
+    description: "Searches for site \"e-CROSS\" (https://www.e-cross.tech/_api/mcp) API documentation and returns how to use the site using the API."
+  - name: GetBusinessDetails
+    description: "Get business and site details for \"e-CROSS\" (https://www.e-cross.tech/_api/mcp)."
+  - name: SearchInSite
+    description: "Searches the site \"e-CROSS\" (https://www.e-cross.tech/_api/mcp) for information."
+  - name: ExecuteWixAPI
+    description: "Run JavaScript against the Wix REST API on site \"e-CROSS\" (https://www.e-cross.tech/_api/mcp), on the visitor's behalf. The code runs in a sandbox and you get back whatever it retu"

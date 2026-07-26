@@ -1,7 +1,26 @@
 aid: e-cross
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/e-cross.png
 name: e-CROSS
-description: e-CROSS is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  e-CROSS is a cross-border e-commerce platform that lets international brands sell into
+  Latin America. Acting as a Merchant of Record, it handles payment processing, currency
+  exchange, logistics and fulfillment intelligence, customs and legal compliance, and
+  storefront localization so merchants can expand into the region with a simple integration
+  into their existing e-commerce stack. e-CROSS is a 500 Global portfolio company. Its
+  public site runs on Wix and exposes a hosted, unauthenticated Model Context Protocol
+  (MCP) server plus an llms.txt for agentic AI access to public site content; e-CROSS does
+  not currently publish a first-party developer API, OpenAPI, or SDK.
 url: https://raw.githubusercontent.com/api-evangelist/e-cross/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +30,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Cross-Border Commerce
+- E-commerce
+- Merchant of Record
+- Payments
+- Logistics
+- Latin America
+- MCP
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +47,17 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/e-cross-domain-security.yml
+- type: MCPServer
+  name: e-CROSS Site MCP (Wix)
+  url: mcp/e-cross-mcp.yml
+- type: LLMsTxt
+  url: llms/e-cross-llms.txt
 - type: Website
   url: https://e-cross.tech
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
